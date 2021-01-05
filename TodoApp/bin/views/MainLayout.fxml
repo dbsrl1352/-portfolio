@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="mainpage" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.TodoController">
+   <children>
+      <Pane layoutX="14.0" layoutY="206.0" prefHeight="180.0" prefWidth="266.0" style="-fx-background-color: rgba(0,0,0,0.2);" styleClass="pane">
+         <children>
+            <Label layoutX="18.0" layoutY="21.0" prefHeight="32.0" prefWidth="190.0" text="날짜" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="83.0" prefHeight="81.0" prefWidth="224.0" text="할일" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" layoutY="15.0" prefHeight="371.0" prefWidth="281.0" style="-fx-background-color: rgba(0,0,0,0.2);" styleClass="pane">
+         <children>
+            <ListView fx:id="listView" layoutX="8.0" layoutY="7.0" prefHeight="313.0" prefWidth="266.0" />
+            <Button layoutX="127.0" layoutY="328.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="63.0" styleClass="btn" text="읽기">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="204.0" layoutY="328.0" mnemonicParsing="false" onAction="#delTodo" prefHeight="32.0" prefWidth="63.0" styleClass="btn" text="삭제">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="15.0" prefHeight="171.0" prefWidth="266.0" style="-fx-background-color: rgba(0,0,0,0.2);">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="9.0" prefHeight="32.0" prefWidth="238.0" text="일정 입력" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="88.0" prefHeight="22.0" prefWidth="44.0" text="할일" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="53.0" prefHeight="22.0" prefWidth="44.0" text="날짜" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtField" layoutX="73.0" layoutY="88.0" prefHeight="23.0" prefWidth="178.0" />
+            <DatePicker fx:id="datePicker" layoutX="73.0" layoutY="53.0" prefHeight="23.0" prefWidth="178.0" />
+            <Button layoutX="189.0" layoutY="134.0" mnemonicParsing="false" onAction="#addTodo" prefHeight="23.0" prefWidth="63.0" styleClass="btn" text="등록">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

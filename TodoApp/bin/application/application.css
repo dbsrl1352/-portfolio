@@ -1,0 +1,33 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.mainpage{
+	-fx-background-image: url(/resources/magicshop.jpg);
+	-fx-background-size: cover;
+	-fx-background-position: center;
+}
+
+.pane{
+	-fx-background-radius: 5px;
+}
+
+.pane > Label {
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0,.5), 0, 1, 2, 2); 
+	/*그림자 방식,색상, 중심점,번짐정도 
+	*그림자의 위치x, 그림자의 위치y*/
+}
+
+.btn {
+	-fx-border-radius: 4px;
+	-fx-background-radius: 4px;
+	-fx-background-color: #007bff;
+	-fx-text-fill: #fff;
+	-fx-border-color: #007bff;
+	-fx-padding: 8px 12px;
+	-fx-cursor: hand;
+}
+
+.btn:hover{
+	-fx-background-color: #0069d9;
+	-fx-border-color: #0062cc;
+	
+}
